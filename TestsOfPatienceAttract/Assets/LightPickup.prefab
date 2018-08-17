@@ -166,4 +166,4 @@ MonoBehaviour:
   moveIndependent: 0
   lightPickup: 1
   darkPickup: 0
-  pickupScore: 15
+  pickupScore: 40

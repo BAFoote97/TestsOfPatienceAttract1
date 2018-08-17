@@ -23,7 +23,9 @@ public class PlayerController : MonoBehaviour
 
     public Material currentMat;
     public Material lightMat;
+    public GameObject lightParticles;
     public Material darkMat;
+    public GameObject darkParticles;
     public Renderer rend;
 
     public float playerScore;
@@ -116,11 +118,15 @@ public class PlayerController : MonoBehaviour
         {
             gameObject.layer = 11;
             currentMat = lightMat;
+            lightParticles.SetActive(true);
+            darkParticles.SetActive(false);
         }
         if (darkMode == true)
         {
             gameObject.layer = 12;
             currentMat = darkMat;
+            darkParticles.SetActive(true);
+            lightParticles.SetActive(false);
         }
 
     }
