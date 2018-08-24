@@ -19,6 +19,10 @@ public class EmitterScript : MonoBehaviour {
 
     public bool startBool;
 
+    public GameObject parent;
+    public bool isParent;
+
+
 	// Use this for initialization
 	void Start () {
         startBool = true;
@@ -27,7 +31,7 @@ public class EmitterScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        projectileNumber = (Random.Range(0, 24));
+        projectileNumber = (Random.Range(0, 38));
 
         projectile = possibleProjectile[projectileNumber];
 
@@ -38,8 +42,14 @@ public class EmitterScript : MonoBehaviour {
             startBool = false;
         }
 
+        if (isParent == false)
+        {
+            delayMin = parent.GetComponent<EmitterScript>().delayMin;
+            delayMax = parent.GetComponent<EmitterScript>().delayMax;
+        }
 
-        if (canShoot == true)
+
+        if (canShoot == true && isParent == false)
         {
             //The Bullet Instantiation happens here.
             GameObject Temporary_Bullet_handler;

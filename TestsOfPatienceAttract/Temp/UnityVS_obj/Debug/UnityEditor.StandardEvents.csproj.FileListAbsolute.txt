@@ -1,0 +1,2 @@
+C:\Users\student.AII\Documents\GitHub\TestsOfPatienceAttract1\TestsOfPatienceAttract\Temp\UnityVS_obj\Debug\UnityEditor.StandardEvents.csprojResolveAssemblyReference.cache
+C:\Users\student.AII\Documents\GitHub\TestsOfPatienceAttract1\TestsOfPatienceAttract\Temp\UnityVS_obj\Debug\UnityEditor.StandardEvents.csproj.CoreCompileInputs.cache
