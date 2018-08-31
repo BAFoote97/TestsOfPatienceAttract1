@@ -1,2 +1,0 @@
-C:\Users\student.AII\Documents\GitHub\TestsOfPatienceAttract1\TestsOfPatienceAttract\Temp\UnityVS_obj\Debug\TestsOfPatienceAttract.csprojResolveAssemblyReference.cache
-C:\Users\student.AII\Documents\GitHub\TestsOfPatienceAttract1\TestsOfPatienceAttract\Temp\UnityVS_obj\Debug\TestsOfPatienceAttract.csproj.CoreCompileInputs.cache

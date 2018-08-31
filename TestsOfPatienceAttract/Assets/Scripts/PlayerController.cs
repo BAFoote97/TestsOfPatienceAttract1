@@ -47,6 +47,9 @@ public class PlayerController : MonoBehaviour
 
     public GameObject newHighScore;
 
+    public bool wallKillsPlayer;
+    public GameObject wallWarnings;
+
     // Use this for initialization
     void Start()
     {
@@ -57,12 +60,23 @@ public class PlayerController : MonoBehaviour
         baseHighScore = PlayerPrefs.GetFloat("High Score");
         highScore = baseHighScore;
 
+        //emitterSide1.SetActive(false);
+        //emitterSide2.SetActive(false);
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
+        //if (wallKillsPlayer == true)
+        //{
+        //    wallWarnings.SetActive(true);
+        //}
+        //if (wallKillsPlayer == false)
+        //{
+        //    wallWarnings.SetActive(false);
+        //}
         if (Input.GetKeyDown(KeyCode.P))
         {
             PauseGame();
@@ -185,10 +199,10 @@ public class PlayerController : MonoBehaviour
             emitterSide3.GetComponent<EmitterScript>().delayMax = 50;
             emitterSide4.GetComponent<EmitterScript>().delayMax = 50;
 
-            emitterSide1.GetComponent<EmitterScript>().delayMin = 15;
-            emitterSide2.GetComponent<EmitterScript>().delayMin = 15;
-            emitterSide3.GetComponent<EmitterScript>().delayMin = 15;
-            emitterSide4.GetComponent<EmitterScript>().delayMin = 15;
+            emitterSide1.GetComponent<EmitterScript>().delayMin = 20;
+            emitterSide2.GetComponent<EmitterScript>().delayMin = 20;
+            emitterSide3.GetComponent<EmitterScript>().delayMin = 20;
+            emitterSide4.GetComponent<EmitterScript>().delayMin = 20;
         }
 
         if (playerScore > 100 && playerScore <= 200)
@@ -198,10 +212,10 @@ public class PlayerController : MonoBehaviour
             emitterSide3.GetComponent<EmitterScript>().delayMax = 45;
             emitterSide4.GetComponent<EmitterScript>().delayMax = 45;
 
-            emitterSide1.GetComponent<EmitterScript>().delayMin = 15;
-            emitterSide2.GetComponent<EmitterScript>().delayMin = 15;
-            emitterSide3.GetComponent<EmitterScript>().delayMin = 15;
-            emitterSide4.GetComponent<EmitterScript>().delayMin = 15;
+            emitterSide1.GetComponent<EmitterScript>().delayMin = 19;
+            emitterSide2.GetComponent<EmitterScript>().delayMin = 19;
+            emitterSide3.GetComponent<EmitterScript>().delayMin = 19;
+            emitterSide4.GetComponent<EmitterScript>().delayMin = 19;
         }
 
         if (playerScore > 200 && playerScore <= 300)
@@ -211,10 +225,10 @@ public class PlayerController : MonoBehaviour
             emitterSide3.GetComponent<EmitterScript>().delayMax = 45;
             emitterSide4.GetComponent<EmitterScript>().delayMax = 45;
 
-            emitterSide1.GetComponent<EmitterScript>().delayMin = 14;
-            emitterSide2.GetComponent<EmitterScript>().delayMin = 14;
-            emitterSide3.GetComponent<EmitterScript>().delayMin = 14;
-            emitterSide4.GetComponent<EmitterScript>().delayMin = 14;
+            emitterSide1.GetComponent<EmitterScript>().delayMin = 18;
+            emitterSide2.GetComponent<EmitterScript>().delayMin = 18;
+            emitterSide3.GetComponent<EmitterScript>().delayMin = 18;
+            emitterSide4.GetComponent<EmitterScript>().delayMin = 18;
         }
 
         if (playerScore > 300 && playerScore <= 400)
@@ -224,10 +238,10 @@ public class PlayerController : MonoBehaviour
             emitterSide3.GetComponent<EmitterScript>().delayMax = 40;
             emitterSide4.GetComponent<EmitterScript>().delayMax = 40;
 
-            emitterSide1.GetComponent<EmitterScript>().delayMin = 14;
-            emitterSide2.GetComponent<EmitterScript>().delayMin = 14;
-            emitterSide3.GetComponent<EmitterScript>().delayMin = 14;
-            emitterSide4.GetComponent<EmitterScript>().delayMin = 14;
+            emitterSide1.GetComponent<EmitterScript>().delayMin = 17;
+            emitterSide2.GetComponent<EmitterScript>().delayMin = 17;
+            emitterSide3.GetComponent<EmitterScript>().delayMin = 17;
+            emitterSide4.GetComponent<EmitterScript>().delayMin = 17;
         }
 
         if (playerScore > 400 && playerScore <= 500)
@@ -237,23 +251,25 @@ public class PlayerController : MonoBehaviour
             emitterSide3.GetComponent<EmitterScript>().delayMax = 35;
             emitterSide4.GetComponent<EmitterScript>().delayMax = 35;
 
-            emitterSide1.GetComponent<EmitterScript>().delayMin = 14;
-            emitterSide2.GetComponent<EmitterScript>().delayMin = 14;
-            emitterSide3.GetComponent<EmitterScript>().delayMin = 14;
-            emitterSide4.GetComponent<EmitterScript>().delayMin = 14;
+            emitterSide1.GetComponent<EmitterScript>().delayMin = 16;
+            emitterSide2.GetComponent<EmitterScript>().delayMin = 16;
+            emitterSide3.GetComponent<EmitterScript>().delayMin = 16;
+            emitterSide4.GetComponent<EmitterScript>().delayMin = 16;
         }
 
         if (playerScore > 500 && playerScore <= 600)
         {
+            //emitterSide1.SetActive(true);
+            //emitterSide2.SetActive(true);
             emitterSide1.GetComponent<EmitterScript>().delayMax = 35;
             emitterSide2.GetComponent<EmitterScript>().delayMax = 35;
             emitterSide3.GetComponent<EmitterScript>().delayMax = 35;
             emitterSide4.GetComponent<EmitterScript>().delayMax = 35;
 
-            emitterSide1.GetComponent<EmitterScript>().delayMin = 13;
-            emitterSide2.GetComponent<EmitterScript>().delayMin = 13;
-            emitterSide3.GetComponent<EmitterScript>().delayMin = 13;
-            emitterSide4.GetComponent<EmitterScript>().delayMin = 13;
+            emitterSide1.GetComponent<EmitterScript>().delayMin = 15;
+            emitterSide2.GetComponent<EmitterScript>().delayMin = 15;
+            emitterSide3.GetComponent<EmitterScript>().delayMin = 15;
+            emitterSide4.GetComponent<EmitterScript>().delayMin = 15;
         }
 
         if (playerScore > 600 && playerScore <= 700)
@@ -263,10 +279,10 @@ public class PlayerController : MonoBehaviour
             emitterSide3.GetComponent<EmitterScript>().delayMax = 30;
             emitterSide4.GetComponent<EmitterScript>().delayMax = 30;
 
-            emitterSide1.GetComponent<EmitterScript>().delayMin = 13;
-            emitterSide2.GetComponent<EmitterScript>().delayMin = 13;
-            emitterSide3.GetComponent<EmitterScript>().delayMin = 13;
-            emitterSide4.GetComponent<EmitterScript>().delayMin = 13;
+            emitterSide1.GetComponent<EmitterScript>().delayMin = 14;
+            emitterSide2.GetComponent<EmitterScript>().delayMin = 14;
+            emitterSide3.GetComponent<EmitterScript>().delayMin = 14;
+            emitterSide4.GetComponent<EmitterScript>().delayMin = 14;
         }
 
         if (playerScore > 700 && playerScore <= 800)
@@ -603,7 +619,7 @@ public class PlayerController : MonoBehaviour
                 Destroy(other.gameObject);
             }
         }
-        if (other.gameObject.tag == "Border")
+        if (other.gameObject.tag == "Border" && wallKillsPlayer == true)
         {
             Debug.Log("Player died");
             gameOverText.SetActive(true);

@@ -161,8 +161,8 @@ MonoBehaviour:
   moveMin: 20
   moveMax: 100
   rotSpeed: 0
-  moveSpeed: 75
-  delayToPush: 0.05
+  moveSpeed: 30
+  delayToPush: 0.1
   moveIndependent: 0
   lightPickup: 0
   darkPickup: 0

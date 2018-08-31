@@ -26,12 +26,13 @@ public class EmitterScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         startBool = true;
+        canShoot = false;
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        projectileNumber = (Random.Range(0, 38));
+        projectileNumber = (Random.Range(0, possibleProjectile.Count));
 
         projectile = possibleProjectile[projectileNumber];
 
@@ -72,6 +73,8 @@ public class EmitterScript : MonoBehaviour {
             canShoot = false;
             StartCoroutine(ShootDelay());
         }
+
+        
 
     }
 
