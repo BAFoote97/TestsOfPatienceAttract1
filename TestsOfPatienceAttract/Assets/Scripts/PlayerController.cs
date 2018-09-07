@@ -631,6 +631,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnDestroy()
     {
+        //mainCamera.GetComponent<AudioSource>().enabled = false;
         PlayerPrefs.SetFloat("High Score", highScore);
     }
 
