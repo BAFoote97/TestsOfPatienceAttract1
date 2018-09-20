@@ -104,65 +104,64 @@ public class PlayerController : MonoBehaviour
         {
             rend = GetComponent<Renderer>();
             gameOverText.SetActive(false);
+			newHighScore.SetActive(false);
 
-            newHighScore.SetActive(false);
-            baseHighScore = PlayerPrefs.GetFloat("High Score");
-            topScore = baseHighScore;
+            
         }
-
-        
-            Top10Scores[0] = PlayerPrefs.GetFloat("TopScore1");
-        Debug.Log(Top10Scores[0]);
-        if (Top10Scores[0] < defaultScore1)
-        {
-            Top10Scores[0] = defaultScore1;
-        }
-
-            Top10Scores[1] = PlayerPrefs.GetFloat("TopScore2");
-        if (Top10Scores[1] < defaultScore2)
-        {
-            Top10Scores[1] = defaultScore2;
-        }
-        Top10Scores[2] = PlayerPrefs.GetFloat("TopScore3");
-        if (Top10Scores[2] < defaultScore3)
-        {
-            Top10Scores[2] = defaultScore3;
-        }
-        Top10Scores[3] = PlayerPrefs.GetFloat("TopScore4");
-        if (Top10Scores[3] < defaultScore4)
-        {
-            Top10Scores[3] = defaultScore4;
-        }
-        Top10Scores[4] = PlayerPrefs.GetFloat("TopScore5");
-        if (Top10Scores[4] < defaultScore5)
-        {
-            Top10Scores[4] = defaultScore5;
-        }
-        Top10Scores[5] = PlayerPrefs.GetFloat("TopScore6");
-        if (Top10Scores[5] < defaultScore6)
-        {
-            Top10Scores[5] = defaultScore6;
-        }
-        Top10Scores[6] = PlayerPrefs.GetFloat("TopScore7");
-        if (Top10Scores[6] < defaultScore7)
-        {
-            Top10Scores[6] = defaultScore7;
-        }
-        Top10Scores[7] = PlayerPrefs.GetFloat("TopScore8");
-        if (Top10Scores[7] < defaultScore8)
-        {
-            Top10Scores[7] = defaultScore8;
-        }
-        Top10Scores[8] = PlayerPrefs.GetFloat("TopScore9");
-        if (Top10Scores[8] < defaultScore9)
-        {
-            Top10Scores[8] = defaultScore9;
-        }
-        Top10Scores[9] = PlayerPrefs.GetFloat("TopScore10");
-        if (Top10Scores[9] < defaultScore10)
-        {
-            Top10Scores[9] = defaultScore10;
-        }
+		baseHighScore = PlayerPrefs.GetFloat("High Score");
+		baseHighScore = topScore;
+//            Top10Scores[0] = PlayerPrefs.GetFloat("TopScore1");
+//        Debug.Log(Top10Scores[0]);
+//        if (Top10Scores[0] < defaultScore1)
+//        {
+//            Top10Scores[0] = defaultScore1;
+//        }
+//
+//            Top10Scores[1] = PlayerPrefs.GetFloat("TopScore2");
+//        if (Top10Scores[1] < defaultScore2)
+//        {
+//            Top10Scores[1] = defaultScore2;
+//        }
+//        Top10Scores[2] = PlayerPrefs.GetFloat("TopScore3");
+//        if (Top10Scores[2] < defaultScore3)
+//        {
+//            Top10Scores[2] = defaultScore3;
+//        }
+//        Top10Scores[3] = PlayerPrefs.GetFloat("TopScore4");
+//        if (Top10Scores[3] < defaultScore4)
+//        {
+//            Top10Scores[3] = defaultScore4;
+//        }
+//        Top10Scores[4] = PlayerPrefs.GetFloat("TopScore5");
+//        if (Top10Scores[4] < defaultScore5)
+//        {
+//            Top10Scores[4] = defaultScore5;
+//        }
+//        Top10Scores[5] = PlayerPrefs.GetFloat("TopScore6");
+//        if (Top10Scores[5] < defaultScore6)
+//        {
+//            Top10Scores[5] = defaultScore6;
+//        }
+//        Top10Scores[6] = PlayerPrefs.GetFloat("TopScore7");
+//        if (Top10Scores[6] < defaultScore7)
+//        {
+//            Top10Scores[6] = defaultScore7;
+//        }
+//        Top10Scores[7] = PlayerPrefs.GetFloat("TopScore8");
+//        if (Top10Scores[7] < defaultScore8)
+//        {
+//            Top10Scores[7] = defaultScore8;
+//        }
+//        Top10Scores[8] = PlayerPrefs.GetFloat("TopScore9");
+//        if (Top10Scores[8] < defaultScore9)
+//        {
+//            Top10Scores[8] = defaultScore9;
+//        }
+//        Top10Scores[9] = PlayerPrefs.GetFloat("TopScore10");
+//        if (Top10Scores[9] < defaultScore10)
+//        {
+//            Top10Scores[9] = defaultScore10;
+//        }
 
 
 
@@ -693,162 +692,162 @@ public class PlayerController : MonoBehaviour
                 emitterSide4.GetComponent<EmitterScript>().delayMin = 0.5f;
             }
         }
-        if (playerScore > Top10Scores[0])
-        {
-            Debug.Log("Score 1 beaten");
-            Top10Scores[9] = Top10Scores[8];
-            Top10Scores[8] = Top10Scores[7];
-            Top10Scores[7] = Top10Scores[6];
-            Top10Scores[6] = Top10Scores[5];
-            Top10Scores[5] = Top10Scores[4];
-            Top10Scores[4] = Top10Scores[3];
-            Top10Scores[3] = Top10Scores[2];
-            Top10Scores[2] = Top10Scores[1];
-            Top10Scores[1] = Top10Scores[0];
+//        if (playerScore > Top10Scores[0])
+//        {
+//            Debug.Log("Score 1 beaten");
+//            Top10Scores[9] = Top10Scores[8];
+//            Top10Scores[8] = Top10Scores[7];
+//            Top10Scores[7] = Top10Scores[6];
+//            Top10Scores[6] = Top10Scores[5];
+//            Top10Scores[5] = Top10Scores[4];
+//            Top10Scores[4] = Top10Scores[3];
+//            Top10Scores[3] = Top10Scores[2];
+//            Top10Scores[2] = Top10Scores[1];
+//            Top10Scores[1] = Top10Scores[0];
+//
+//            playerScore = Top10Scores[0];
+//            newHighScore.SetActive(true);
+//
+//
+//        }
+//        if (playerScore > Top10Scores[1] && playerScore <= Top10Scores[0])
+//        {
+//            Debug.Log("Score 2 beaten");
+//
+//            Top10Scores[9] = Top10Scores[8];
+//            Top10Scores[8] = Top10Scores[7];
+//            Top10Scores[7] = Top10Scores[6];
+//            Top10Scores[6] = Top10Scores[5];
+//            Top10Scores[5] = Top10Scores[4];
+//            Top10Scores[4] = Top10Scores[3];
+//            Top10Scores[3] = Top10Scores[2];
+//            Top10Scores[2] = Top10Scores[1];
+//            playerScore = Top10Scores[1];
+//            newHighScore.SetActive(true);
+//
+//
+//        }
+//        if (playerScore > Top10Scores[2] && playerScore <= Top10Scores[1])
+//        {
+//            Debug.Log("Score 3 beaten");
+//
+//            Top10Scores[9] = Top10Scores[8];
+//            Top10Scores[8] = Top10Scores[7];
+//            Top10Scores[7] = Top10Scores[6];
+//            Top10Scores[6] = Top10Scores[5];
+//            Top10Scores[5] = Top10Scores[4];
+//            Top10Scores[4] = Top10Scores[3];
+//            Top10Scores[3] = Top10Scores[2];
+//            
+//            playerScore = Top10Scores[2];
+//            newHighScore.SetActive(true);
+//
+//
+//        }
+//        if (playerScore > Top10Scores[3] && playerScore <= Top10Scores[2])
+//        {
+//            Debug.Log("Score 4 beaten");
+//
+//            Top10Scores[9] = Top10Scores[8];
+//            Top10Scores[8] = Top10Scores[7];
+//            Top10Scores[7] = Top10Scores[6];
+//            Top10Scores[6] = Top10Scores[5];
+//            Top10Scores[5] = Top10Scores[4];
+//            Top10Scores[4] = Top10Scores[3];
+//            
+//            playerScore = Top10Scores[3];
+//            newHighScore.SetActive(true);
+//
+//
+//        }
+//        if (playerScore > Top10Scores[4] && playerScore <= Top10Scores[3])
+//        {
+//            Debug.Log("Score 5 beaten");
+//
+//            Top10Scores[9] = Top10Scores[8];
+//            Top10Scores[8] = Top10Scores[7];
+//            Top10Scores[7] = Top10Scores[6];
+//            Top10Scores[6] = Top10Scores[5];
+//            Top10Scores[5] = Top10Scores[4];
+//            
+//            playerScore = Top10Scores[4];
+//            newHighScore.SetActive(true);
+//
+//
+//        }
+//        if (playerScore > Top10Scores[5] && playerScore <= Top10Scores[4])
+//        {
+//            Debug.Log("Score 6 beaten");
+//
+//            Top10Scores[9] = Top10Scores[8];
+//            Top10Scores[8] = Top10Scores[7];
+//            Top10Scores[7] = Top10Scores[6];
+//            Top10Scores[6] = Top10Scores[5];
+//            
+//            playerScore = Top10Scores[5];
+//            newHighScore.SetActive(true);
+//
+//
+//        }
+//        if (playerScore > Top10Scores[6] && playerScore <= Top10Scores[5])
+//        {
+//            Debug.Log("Score 7 beaten");
+//
+//            Top10Scores[9] = Top10Scores[8];
+//            Top10Scores[8] = Top10Scores[7];
+//            Top10Scores[7] = Top10Scores[6];
+//            
+//            playerScore = Top10Scores[6];
+//            newHighScore.SetActive(true);
+//
+//
+//        }
+//        if (playerScore > Top10Scores[7] && playerScore <= Top10Scores[6])
+//        {
+//            Debug.Log("Score 8 beaten");
+//
+//            Top10Scores[9] = Top10Scores[8];
+//            Top10Scores[8] = Top10Scores[7];
+//            
+//            playerScore = Top10Scores[7];
+//            newHighScore.SetActive(true);
+//
+//
+//        }
+//        if (playerScore > Top10Scores[8] && playerScore <= Top10Scores[7])
+//        {
+//            Debug.Log("Score 9 beaten");
+//
+//            Top10Scores[9] = Top10Scores[8];
+//            playerScore = Top10Scores[8];
+//            newHighScore.SetActive(true);
+//
+//
+//        }
+//        if (playerScore > Top10Scores[9] && playerScore <= Top10Scores[8])
+//        {
+//            Debug.Log("Score 10 beaten");
+//
+//            playerScore = Top10Scores[9];
+//            newHighScore.SetActive(true);
+//
+//
+//        }
 
-            playerScore = Top10Scores[0];
-            newHighScore.SetActive(true);
-
-
-        }
-        if (playerScore > Top10Scores[1] && playerScore <= Top10Scores[0])
-        {
-            Debug.Log("Score 2 beaten");
-
-            Top10Scores[9] = Top10Scores[8];
-            Top10Scores[8] = Top10Scores[7];
-            Top10Scores[7] = Top10Scores[6];
-            Top10Scores[6] = Top10Scores[5];
-            Top10Scores[5] = Top10Scores[4];
-            Top10Scores[4] = Top10Scores[3];
-            Top10Scores[3] = Top10Scores[2];
-            Top10Scores[2] = Top10Scores[1];
-            playerScore = Top10Scores[1];
-            newHighScore.SetActive(true);
-
-
-        }
-        if (playerScore > Top10Scores[2] && playerScore <= Top10Scores[1])
-        {
-            Debug.Log("Score 3 beaten");
-
-            Top10Scores[9] = Top10Scores[8];
-            Top10Scores[8] = Top10Scores[7];
-            Top10Scores[7] = Top10Scores[6];
-            Top10Scores[6] = Top10Scores[5];
-            Top10Scores[5] = Top10Scores[4];
-            Top10Scores[4] = Top10Scores[3];
-            Top10Scores[3] = Top10Scores[2];
-            
-            playerScore = Top10Scores[2];
-            newHighScore.SetActive(true);
-
-
-        }
-        if (playerScore > Top10Scores[3] && playerScore <= Top10Scores[2])
-        {
-            Debug.Log("Score 4 beaten");
-
-            Top10Scores[9] = Top10Scores[8];
-            Top10Scores[8] = Top10Scores[7];
-            Top10Scores[7] = Top10Scores[6];
-            Top10Scores[6] = Top10Scores[5];
-            Top10Scores[5] = Top10Scores[4];
-            Top10Scores[4] = Top10Scores[3];
-            
-            playerScore = Top10Scores[3];
-            newHighScore.SetActive(true);
-
-
-        }
-        if (playerScore > Top10Scores[4] && playerScore <= Top10Scores[3])
-        {
-            Debug.Log("Score 5 beaten");
-
-            Top10Scores[9] = Top10Scores[8];
-            Top10Scores[8] = Top10Scores[7];
-            Top10Scores[7] = Top10Scores[6];
-            Top10Scores[6] = Top10Scores[5];
-            Top10Scores[5] = Top10Scores[4];
-            
-            playerScore = Top10Scores[4];
-            newHighScore.SetActive(true);
-
-
-        }
-        if (playerScore > Top10Scores[5] && playerScore <= Top10Scores[4])
-        {
-            Debug.Log("Score 6 beaten");
-
-            Top10Scores[9] = Top10Scores[8];
-            Top10Scores[8] = Top10Scores[7];
-            Top10Scores[7] = Top10Scores[6];
-            Top10Scores[6] = Top10Scores[5];
-            
-            playerScore = Top10Scores[5];
-            newHighScore.SetActive(true);
-
-
-        }
-        if (playerScore > Top10Scores[6] && playerScore <= Top10Scores[5])
-        {
-            Debug.Log("Score 7 beaten");
-
-            Top10Scores[9] = Top10Scores[8];
-            Top10Scores[8] = Top10Scores[7];
-            Top10Scores[7] = Top10Scores[6];
-            
-            playerScore = Top10Scores[6];
-            newHighScore.SetActive(true);
-
-
-        }
-        if (playerScore > Top10Scores[7] && playerScore <= Top10Scores[6])
-        {
-            Debug.Log("Score 8 beaten");
-
-            Top10Scores[9] = Top10Scores[8];
-            Top10Scores[8] = Top10Scores[7];
-            
-            playerScore = Top10Scores[7];
-            newHighScore.SetActive(true);
-
-
-        }
-        if (playerScore > Top10Scores[8] && playerScore <= Top10Scores[7])
-        {
-            Debug.Log("Score 9 beaten");
-
-            Top10Scores[9] = Top10Scores[8];
-            playerScore = Top10Scores[8];
-            newHighScore.SetActive(true);
-
-
-        }
-        if (playerScore > Top10Scores[9] && playerScore <= Top10Scores[8])
-        {
-            Debug.Log("Score 10 beaten");
-
-            playerScore = Top10Scores[9];
-            newHighScore.SetActive(true);
-
-
-        }
-
-        if (menuRef == true)
-        {
-            score1Text.text = Top10Scores[0].ToString();
-            score2Text.text = Top10Scores[1].ToString();
-            score3Text.text = Top10Scores[2].ToString();
-            score4Text.text = Top10Scores[3].ToString();
-            score5Text.text = Top10Scores[4].ToString();
-            score6Text.text = Top10Scores[5].ToString();
-            score7Text.text = Top10Scores[6].ToString();
-            score8Text.text = Top10Scores[7].ToString();
-            score9Text.text = Top10Scores[8].ToString();
-            score10Text.text = Top10Scores[9].ToString();
-
-        }
+//        if (menuRef == true)
+//        {
+//            score1Text.text = Top10Scores[0].ToString();
+//            score2Text.text = Top10Scores[1].ToString();
+//            score3Text.text = Top10Scores[2].ToString();
+//            score4Text.text = Top10Scores[3].ToString();
+//            score5Text.text = Top10Scores[4].ToString();
+//            score6Text.text = Top10Scores[5].ToString();
+//            score7Text.text = Top10Scores[6].ToString();
+//            score8Text.text = Top10Scores[7].ToString();
+//            score9Text.text = Top10Scores[8].ToString();
+//            score10Text.text = Top10Scores[9].ToString();
+//
+//        }
 
 
     }
@@ -895,31 +894,30 @@ public class PlayerController : MonoBehaviour
 
     public void OnDestroy()
     {
-        Debug.Log("Player died");
-        Debug.Log(Top10Scores[0]);
-        Debug.Log(Top10Scores[1]);
-        Debug.Log(Top10Scores[2]);
-        Debug.Log(Top10Scores[3]);
-        Debug.Log(Top10Scores[4]);
-        Debug.Log(Top10Scores[5]);
-        Debug.Log(Top10Scores[6]);
-        Debug.Log(Top10Scores[7]);
-        Debug.Log(Top10Scores[8]);
-        Debug.Log(Top10Scores[9]);
+//        Debug.Log(Top10Scores[0]);
+//        Debug.Log(Top10Scores[1]);
+//        Debug.Log(Top10Scores[2]);
+//        Debug.Log(Top10Scores[3]);
+//        Debug.Log(Top10Scores[4]);
+//        Debug.Log(Top10Scores[5]);
+//        Debug.Log(Top10Scores[6]);
+//        Debug.Log(Top10Scores[7]);
+//        Debug.Log(Top10Scores[8]);
+//        Debug.Log(Top10Scores[9]);
 
 
         //mainCamera.GetComponent<AudioSource>().enabled = false;
         PlayerPrefs.SetFloat("High Score", topScore);
-        PlayerPrefs.SetFloat("TopScore1", Top10Scores[0]);
-        PlayerPrefs.SetFloat("TopScore2", Top10Scores[1]);
-        PlayerPrefs.SetFloat("TopScore3", Top10Scores[2]);
-        PlayerPrefs.SetFloat("TopScore4", Top10Scores[3]);
-        PlayerPrefs.SetFloat("TopScore5", Top10Scores[4]);
-        PlayerPrefs.SetFloat("TopScore6", Top10Scores[5]);
-        PlayerPrefs.SetFloat("TopScore7", Top10Scores[6]);
-        PlayerPrefs.SetFloat("TopScore8", Top10Scores[7]);
-        PlayerPrefs.SetFloat("TopScore9", Top10Scores[8]);
-        PlayerPrefs.SetFloat("TopScore10", Top10Scores[9]);
+//        PlayerPrefs.SetFloat("TopScore1", Top10Scores[0]);
+//        PlayerPrefs.SetFloat("TopScore2", Top10Scores[1]);
+//        PlayerPrefs.SetFloat("TopScore3", Top10Scores[2]);
+//        PlayerPrefs.SetFloat("TopScore4", Top10Scores[3]);
+//        PlayerPrefs.SetFloat("TopScore5", Top10Scores[4]);
+//        PlayerPrefs.SetFloat("TopScore6", Top10Scores[5]);
+//        PlayerPrefs.SetFloat("TopScore7", Top10Scores[6]);
+//        PlayerPrefs.SetFloat("TopScore8", Top10Scores[7]);
+//        PlayerPrefs.SetFloat("TopScore9", Top10Scores[8]);
+//        PlayerPrefs.SetFloat("TopScore10", Top10Scores[9]);
     }
 
     public void PauseGame()
@@ -939,22 +937,22 @@ public class PlayerController : MonoBehaviour
 
     public void ResetHighScore()
     {
-        baseHighScore = 100;
-
-        topScore = 100;
-
-
-        PlayerPrefs.SetFloat("High Score", defaultScore1);
-        PlayerPrefs.SetFloat("TopScore1", defaultScore1);
-        PlayerPrefs.SetFloat("TopScore2", defaultScore2);
-        PlayerPrefs.SetFloat("TopScore3", defaultScore3);
-        PlayerPrefs.SetFloat("TopScore4", defaultScore4);
-        PlayerPrefs.SetFloat("TopScore5", defaultScore5);
-        PlayerPrefs.SetFloat("TopScore6", defaultScore6);
-        PlayerPrefs.SetFloat("TopScore7", defaultScore7);
-        PlayerPrefs.SetFloat("TopScore8", defaultScore8);
-        PlayerPrefs.SetFloat("TopScore9", defaultScore9);
-        PlayerPrefs.SetFloat("TopScore10", defaultScore10);
+//        baseHighScore = 100;
+//
+//        topScore = 100;
+//
+//
+//        PlayerPrefs.SetFloat("High Score", defaultScore1);
+//        PlayerPrefs.SetFloat("TopScore1", defaultScore1);
+//        PlayerPrefs.SetFloat("TopScore2", defaultScore2);
+//        PlayerPrefs.SetFloat("TopScore3", defaultScore3);
+//        PlayerPrefs.SetFloat("TopScore4", defaultScore4);
+//        PlayerPrefs.SetFloat("TopScore5", defaultScore5);
+//        PlayerPrefs.SetFloat("TopScore6", defaultScore6);
+//        PlayerPrefs.SetFloat("TopScore7", defaultScore7);
+//        PlayerPrefs.SetFloat("TopScore8", defaultScore8);
+//        PlayerPrefs.SetFloat("TopScore9", defaultScore9);
+//        PlayerPrefs.SetFloat("TopScore10", defaultScore10);
 
     }
 
@@ -977,5 +975,10 @@ public class PlayerController : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+	public void QuitGame(){
+		Application.Quit();
+
+	}
 
 }
