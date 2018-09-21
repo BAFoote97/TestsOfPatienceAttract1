@@ -108,8 +108,8 @@ public class PlayerController : MonoBehaviour
 
             
         }
-		baseHighScore = PlayerPrefs.GetFloat("High Score");
-		baseHighScore = topScore;
+        baseHighScore = PlayerPrefs.GetFloat("High Score");
+		topScore = baseHighScore;
 //            Top10Scores[0] = PlayerPrefs.GetFloat("TopScore1");
 //        Debug.Log(Top10Scores[0]);
 //        if (Top10Scores[0] < defaultScore1)
@@ -173,6 +173,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        highScoreText.text = topScore.ToString();
+
         if (menuRef == false)
         {
             if (wallKillsPlayer == true)
@@ -204,7 +206,6 @@ public class PlayerController : MonoBehaviour
             }
 
             scoreText.text = playerScore.ToString();
-            highScoreText.text = topScore.ToString();
 
             if (playerScore > baseHighScore)
             {
@@ -856,12 +857,18 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag == "DarkObstacle" && lightMode == true)
         {
+            PlayerPrefs.SetFloat("High Score", topScore);
+            PlayerPrefs.Save();
+
             //Debug.Log("Player died");
             gameOverText.SetActive(true);
             Destroy(gameObject);
         }
         if (other.gameObject.tag == "LightObstacle" && darkMode == true)
         {
+            PlayerPrefs.SetFloat("High Score", topScore);
+            PlayerPrefs.Save();
+
             //Debug.Log("Player died");
             gameOverText.SetActive(true);
             Destroy(gameObject);
@@ -886,6 +893,8 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Border" && wallKillsPlayer == true)
         {
             gameOverText.SetActive(true);
+            PlayerPrefs.SetFloat("High Score", topScore);
+            PlayerPrefs.Save();
 
             Destroy(this.gameObject);
         }
@@ -907,7 +916,8 @@ public class PlayerController : MonoBehaviour
 
 
         //mainCamera.GetComponent<AudioSource>().enabled = false;
-        PlayerPrefs.SetFloat("High Score", topScore);
+        //PlayerPrefs.SetFloat("High Score", topScore);
+        //PlayerPrefs.Save();
 //        PlayerPrefs.SetFloat("TopScore1", Top10Scores[0]);
 //        PlayerPrefs.SetFloat("TopScore2", Top10Scores[1]);
 //        PlayerPrefs.SetFloat("TopScore3", Top10Scores[2]);
